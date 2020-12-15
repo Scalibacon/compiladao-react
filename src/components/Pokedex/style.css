@@ -1,0 +1,58 @@
+#pokedexSection{
+    display: flex;
+    flex-direction: column;
+}
+#pokedexSection .pokedexContainer{
+    width:100%;
+    height:300px;
+    margin-top:25px;
+    /* background-color: lightcoral; */
+    font: 400 14px 'Roboto', sans-serif;
+
+    display: flex;
+    flex-direction: row;
+}
+.pokedexContainer .pokelist{
+    width:250px;
+    height:100%;
+    margin-right: 100px;
+    overflow-y: auto;
+    background-color: rgba(211,211,211,1);
+}
+.pokedexContainer .pokelist .pokelistItem{
+    width:100%;
+    height:30px;
+    padding:5px;    
+    background-color: rgba(225,225,225,1);
+    cursor: pointer;
+    box-shadow: inset 0px 0px 1px 1px rgba(130,130,130,0.5);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.pokedexContainer .pokelist .pokelistItem:hover{
+    filter: brightness(107%)
+}
+.pokedexContainer .pokeImg{
+    width:150px;
+    height:150px;
+    margin-top:13px;
+    background-color: rgba(237,237,237,1);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.pokedexContainer .pokeinfo{
+    width:150px;
+    height:30px;
+    padding:11px;
+    margin-top: 11px;
+    background-color: rgba(237,237,237,1);
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.pokedexContainer .pokeImg, .pokedexContainer .pokeinfo{
+    box-shadow: 0px 0px 1px 1px rgba(139,130,130,0.5);
+}

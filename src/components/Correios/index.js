@@ -40,18 +40,17 @@ function Correios(){
 
     function showError(msg){
         setErro(msg);
-        document.querySelector(`.correiosSection .correiosError`).style.display = 'block';
+        document.querySelector(`#correiosSection .correiosError`).style.display = 'block';
     }
 
     function hideError(){
-        document.querySelector(`.correiosSection .correiosError`).style.display = 'none';
+        document.querySelector(`#correiosSection .correiosError`).style.display = 'none';
     }
 
     return(
-        <section className='subtopicSection correiosSection'>
+        <section className='subtopicSection' id='correiosSection'>
             <div className='subtopicTitle'>
                 <h2>Correios</h2>
-                <hr/>
             </div>
             <div>
                 <input type='text' className='correiosCep' value={cep} placeholder='Digite o CEP...' 

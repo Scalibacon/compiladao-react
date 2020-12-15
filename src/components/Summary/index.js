@@ -10,7 +10,7 @@ function Summary(props){
             <dl>
                 <dt>API</dt>
                 <dd><Link to='/api'><FiCornerDownRight size='15'/>Correios</Link></dd>
-                <dd><FiCornerDownRight size='15'/>Pokedex</dd>
+                <dd><Link to='/api'><FiCornerDownRight size='15'/>Pokedex</Link></dd>
 
                 <dt>Canvas</dt>
                 <dd><FiCornerDownRight size='15'/>Viewport</dd>

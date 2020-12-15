@@ -3,6 +3,7 @@ import './style.css';
 
 import Header from '../../components/Header';
 import Correios from '../../components/Correios';
+import Pokedex from '../../components/Pokedex';
 
 function Api(){
     return(
@@ -12,6 +13,7 @@ function Api(){
                 <h1>API</h1>
                 <p>Uso esta página para testar algumas APIs interessantes.</p>
                 <Correios/>
+                <Pokedex/>
             </div>
         </>
     )

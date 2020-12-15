@@ -1,21 +1,21 @@
-.correiosSection{
+#correiosSection{
     display: flex;
     flex-direction: column;
 }
-.correiosSection input{
+#correiosSection input{
     margin-top:25px;
 }
-.correiosSection .correiosCep{
+#correiosSection .correiosCep{
     border-radius: 8px 0px 0px 8px;
     width:200px;
 }
-.correiosSection button{
+#correiosSection button{
     border-radius: 0px 8px 8px 0px;
 }
-.correiosSection input{
+#correiosSection input{
     width:300px;
 }
-.correiosSection .correiosError{
+#correiosSection .correiosError{
     margin-top: 5px;
     width: 200px;
     padding: 7px;

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
-import { toggleTopics, resetToggle } from './script';
+import { toggleTopics, resetToggle, addCloseOnClick, removeCloseOnClick } from './script';
 
 import saladLogo from '../../assets/logo.png';
 import { FiMenu } from 'react-icons/fi';
@@ -10,6 +10,11 @@ import Summary from '../../components/Summary';
 function Header(){
     useEffect(() => {
         resetToggle();
+        addCloseOnClick();
+
+        return () => {
+            removeCloseOnClick();
+        }
     },[]);
 
     return(
