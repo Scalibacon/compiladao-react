@@ -1,0 +1,25 @@
+div.mainContainer{
+    width:75%;
+    margin-top:var(--header-height);
+    height:auto;
+    padding: 5% 6%;
+    overflow: overlay;
+
+    font-family: 'Roboto', sans-serif;
+    background-color: snow;
+}
+
+.mainContainer h1{
+    font-weight: 900;
+    font-size:45px;
+    margin-top:5px;
+}
+.mainContainer h1:first-of-type{
+    margin-top: 0px;
+}
+
+.mainContainer p{
+    margin-top: 40px;
+    font-size: 21px;
+    line-height: 30px;
+}

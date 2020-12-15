@@ -1,0 +1,18 @@
+span.summary{
+    width: auto;
+    align-self: flex-start;
+
+    font: 400 17px Roboto, sans-serif;
+}
+/* .summary dl {
+    margin-top: 15px;
+} */
+.summary dt{
+    margin-top: 7px;
+}
+.summary dl dd{
+    text-indent: 15px;
+    margin-top: 3px;
+    text-decoration: underline;
+    cursor:pointer;
+}
