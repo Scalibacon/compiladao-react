@@ -13,9 +13,9 @@ function Summary(props){
                 <dd><Link to='/api'><FiCornerDownRight size='15'/>Pokedex</Link></dd>
 
                 <dt>Canvas</dt>
-                <dd><FiCornerDownRight size='15'/>Viewport</dd>
-                <dd><FiCornerDownRight size='15'/>Gravidade</dd>
-                <dd><FiCornerDownRight size='15'/>Hitbox</dd>
+                <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Viewport</Link></dd>
+                <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Gravidade</Link></dd>
+                <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Hitbox</Link></dd>
 
                 <dt>CSS</dt>
                 <dd><FiCornerDownRight size='15'/>Animation</dd>

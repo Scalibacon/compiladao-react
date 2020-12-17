@@ -71,6 +71,7 @@ section.subtopicSection{
     display:flex;
     flex-direction:row;
     align-items: center;
+    margin-bottom:25px;
 }
 .subtopicSection .subtopicTitle h2{
     flex-grow: 0;
