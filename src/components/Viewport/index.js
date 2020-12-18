@@ -16,6 +16,7 @@ function Viewport(){
             <div className='subtopicTitle'>
                 <h2>Viewport</h2>                
             </div>
+            <p>Clique no canvas abaixo para voar com o Mew e ver a mudança no viewport.</p>
             <div className='viewportContainer'>
                 <canvas id='viewportCanvas' width='500' height='350'>                    
                 </canvas>
