@@ -14,6 +14,7 @@ function Summary(props){
 
                 <dt>Canvas</dt>
                 <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Viewport</Link></dd>
+                <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Sprite</Link></dd>
                 <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Gravidade</Link></dd>
                 <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Hitbox</Link></dd>
 

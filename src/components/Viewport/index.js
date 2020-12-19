@@ -9,14 +9,14 @@ function Viewport(){
         return () => {
             canvasStop();
         }
-    });
+    },[]);
 
     return(
         <section className='subtopicSection' id='viewportSection'>
             <div className='subtopicTitle'>
                 <h2>Viewport</h2>                
             </div>
-            <p>Clique no canvas abaixo para voar com o Mew e ver a mudança no viewport.</p>
+            <p>Para ver a mudança de viewport, clique no canvas abaixo e voe com o Mew usando as setinhas do teclado.</p>
             <div className='viewportContainer'>
                 <canvas id='viewportCanvas' width='500' height='350'>                    
                 </canvas>

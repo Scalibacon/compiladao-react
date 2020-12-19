@@ -3,6 +3,7 @@ import './style.css';
 
 import Header from '../../components/Header';
 import Viewport from '../../components/Viewport';
+import Gravidade from '../../components/Gravidade';
 
 function Canvas(){
     return(
@@ -12,6 +13,7 @@ function Canvas(){
                 <h1>Canvas</h1>
                 <p>Essa página é usada para testar alguns macetes e truques feitos com Canvas.</p>
                 <Viewport/>
+                <Gravidade/>
             </div>
         </>
     )

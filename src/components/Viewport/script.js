@@ -2,7 +2,8 @@ import mapImg from '../../assets/viewport-map.png';
 import charImg from '../../assets/viewport-char.png';
 
 let canvas, ctx;
-let isCanvasSelected = false; 
+let isCanvasSelected = false;
+let animationId; 
 
 const state = {
     map: {},
@@ -31,9 +32,13 @@ export function canvasStart(){
 }
 
 export function canvasStop(){
+    cancelAnimationFrame(animationId);
     document.removeEventListener('keydown', handleKeyDown);
     window.removeEventListener('keyup', handleKeyUp);
     document.removeEventListener('click', handleViewportCanvasClick);
+    state.map = {};
+    state.char = {};
+    state.cam = {};
 }
 
 function handleViewportCanvasClick(e){
@@ -47,9 +52,7 @@ function handleViewportCanvasClick(e){
 function handleKeyDown(e){
     if(!isCanvasSelected){
         return;
-    }
-
-    e.preventDefault();
+    }    
 
     const key = e.keyCode;
     
@@ -59,12 +62,14 @@ function handleKeyDown(e){
             break;
         case 38:
             state.char.up = true;
+            e.preventDefault();
             break;
         case 39:
             state.char.right = true;
             break;
         case 40:
             state.char.down = true;
+            e.preventDefault();
             break;
         default:
             /*DO-NOTHING*/;
@@ -139,7 +144,7 @@ function render(){
 function loop(){
     update();
     render();
-    requestAnimationFrame(loop);
+    animationId = requestAnimationFrame(loop);
 }
 
 class Element {
@@ -213,6 +218,7 @@ class Camera{
         }
     };
 
+    //É 0.5 porque nos edge() sobram 0.25 de um lado e 0.25 de outro
     render = (ctx) => {
         ctx.fillStyle = 'red';
         ctx.strokeRect(
