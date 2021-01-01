@@ -14,9 +14,10 @@ function Summary(props){
 
                 <dt>Canvas</dt>
                 <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Viewport</Link></dd>
-                <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Sprite</Link></dd>
                 <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Gravidade</Link></dd>
                 <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Hitbox</Link></dd>
+                <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Sprites</Link></dd>                
+                <dd><Link to='/canvas'><FiCornerDownRight size='15'/>Board</Link></dd>
 
                 <dt>CSS</dt>
                 <dd><FiCornerDownRight size='15'/>Animation</dd>
@@ -24,6 +25,9 @@ function Summary(props){
                 <dt>React</dt>
                 <dd><FiCornerDownRight size='15'/>Context</dd>
                 <dd><FiCornerDownRight size='15'/>Router</dd>
+
+                <dt>Diversificados</dt>
+                <dd><Link to='/diversos'><FiCornerDownRight size='15'/>Piano</Link></dd>
             </dl>
         </span>
     )

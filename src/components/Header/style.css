@@ -19,6 +19,7 @@ header.theHeader{
     justify-content: flex-start;
 
     font-family: 'Roboto', sas-serif;
+    z-index:1000;
 }
 .theHeader .menuIcon{
     user-select: none;
@@ -66,7 +67,7 @@ header.theHeader{
 .theHeader + .fixedTopics{
     width: auto;
     height: auto;
-    max-height: 400px;
+    max-height: 450px;
     overflow-y: auto;
     position: fixed;
     left:0;

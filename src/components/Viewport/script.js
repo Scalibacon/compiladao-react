@@ -16,7 +16,7 @@ export function canvasStart(){
     ctx = canvas.getContext('2d');
 
     state.map =  new Element(0,0,819,532,mapImg);
-    state.char = new Element(0,0,38,48,charImg);    
+    state.char = new Char(0,0,38,48,charImg);    
     state.cam = new Camera();
 
     //centralizar o char
@@ -24,7 +24,7 @@ export function canvasStart(){
     state.char.y = (state.map.height - state.char.height)/2;
 
     document.addEventListener('keydown', handleKeyDown);
-    window.addEventListener('keyup', handleKeyUp);
+    document.addEventListener('keyup', handleKeyUp);
 
     document.addEventListener('click', handleViewportCanvasClick);
 
@@ -34,7 +34,7 @@ export function canvasStart(){
 export function canvasStop(){
     cancelAnimationFrame(animationId);
     document.removeEventListener('keydown', handleKeyDown);
-    window.removeEventListener('keyup', handleKeyUp);
+    document.removeEventListener('keyup', handleKeyUp);
     document.removeEventListener('click', handleViewportCanvasClick);
     state.map = {};
     state.char = {};
@@ -98,35 +98,8 @@ function handleKeyUp(e){
 }
 
 function update(){
-    //Move o char ******************************
-    if(state.char.right && !state.char.left)
-        state.char.x += 2;
-
-    if(state.char.left && !state.char.right)
-        state.char.x -= 2;
-
-    if(state.char.up && !state.char.down)
-        state.char.y -= 2;
-
-    if(state.char.down && !state.char.up)
-        state.char.y += 2;
-
-    //Limites do mapa **************************
-    if(state.char.x < 0)
-        state.char.x = 0;
-    
-    if(state.char.x + state.char.width > state.map.width){
-        state.char.x = state.map.width - state.char.width;
-    }
-
-    if(state.char.y < 0){
-        state.char.y = 0;
-    }
-
-    if(state.char.y + state.char.height > state.map.height){
-        state.char.y = state.map.height - state.char.height;
-    } 
-    
+   
+    state.char.update();
     state.cam.update();
 }
 
@@ -163,6 +136,39 @@ class Element {
     }
 } 
 
+class Char extends Element{    
+    update(){
+         //Move o char ******************************
+        if(this.right && !this.left)
+            this.x += 2;
+
+        if(this.left && !this.right)
+            this.x -= 2;
+
+        if(this.up && !this.down)
+            this.y -= 2;
+
+        if(this.down && !this.up)
+            this.y += 2;
+
+        //Limites do mapa **************************
+        if(this.x < 0)
+            this.x = 0;
+
+        if(this.x + this.width > state.map.width){
+            this.x = state.map.width - this.width;
+        }
+
+        if(this.y < 0){
+            this.y = 0;
+        }
+
+        if(this.y + this.height > state.map.height){
+            this.y = state.map.height - this.height;
+        } 
+            }
+        }
+
 class Camera{
     constructor(){
         this.width = canvas.width;
@@ -172,7 +178,7 @@ class Camera{
     }
        
     //Estabelece os limites da câmera (usado pra atualizar posição quando o char tocar)
-    //0.25 e 0.75 são usados pros limites não serem grudados nas bordas
+    //0.25 e 0.75 diminuem a width pra 0.5 afastado 0.25 de cada lado
     leftEdge = () => {
         return this.x + (this.width * 0.25);
     };

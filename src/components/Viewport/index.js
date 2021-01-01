@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import './style.css';
 import { canvasStart, canvasStop } from './script';
 
 function Viewport(){

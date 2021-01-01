@@ -1,0 +1,153 @@
+#pianoSection #piano{
+    width:1000px;
+    height:300px;
+    padding:0px 35px 30px 35px;
+    background-color: rgba(48,62,72,1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#piano .enfeitesContainer{
+    width: 100%;
+    padding:15px;
+    flex-grow: 1;
+    /* height: 40%; */
+
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;    
+    justify-content: flex-start;    
+}
+#piano .enfeitesContainer .caixaDeSom{
+    width: 90px;
+    height:50px;
+    background-color: gray;
+    border-radius: 40px 40px 40px 40px;
+    border: solid 2px white;
+    margin-right: 40px;
+}
+#piano .enfeitesContainer .caixaDeSom.caixaDireita{
+    margin-left:auto;
+    margin-right:0px;
+}
+#piano .enfeitesContainer .barrinhaDeControle{
+    height: 80%;
+    border:solid 1.5px black;
+    background-color: black;
+    margin-right:25px;
+    position: relative;
+}
+#piano .enfeitesContainer .barrinhaDeControle div{
+    width: 14px;
+    height:7px;
+    background-color:red;
+    position: absolute;
+    left:-7px;
+}
+.barrinhaDeControle div#pinguelo2{
+    top:25px;
+}
+.barrinhaDeControle div#pinguelo3{
+    top:40px;
+}
+.barrinhaDeControle div#pinguelo4{
+    top:15px;
+}
+#piano .enfeitesContainer .barraBranca{
+    width: 290px;
+    height: 20px;
+    background-color:white;
+    margin: 20px 30px 0px 30px;
+    box-shadow: inset 0px 0px 4px 1px rgba(100,100,100,1);
+
+}
+#piano .enfeitesContainer .botaoLed{
+    width:15px;
+    height:15px;   
+    border-radius: 50px 50px 50px 50px;
+    border: solid 2px rgba(50,50,50,1);
+    margin: 20px 7px 0px 7px;
+}
+#piano .enfeitesContainer .ledOn{
+    background-color:lightgreen;
+}
+#piano .enfeitesContainer .ledOff{
+    background-color:lightcoral;
+}
+
+#piano .teclasContainer{
+    width: 100%;
+    height: 60%;
+    background-color:white;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+}
+
+#piano .teclasContainer .teclaBranca{
+    height:100%;
+    flex-grow: 1;
+    background-color: snow;
+    border: solid 1px black;
+}
+
+#piano .teclasContainer .teclaPreta{
+    width: 20px;
+    height: 90px;
+    background-color: black;
+    
+    
+    position: absolute;
+    left: 20px;
+}
+
+#piano .teclaPreta.preta0{
+    left: calc(930px/20 * 1 - 10px)
+}
+#piano .teclaPreta.preta1{
+    left: calc(930px/20 * 2 - 10px)
+}
+#piano .teclaPreta.preta2{
+    left: calc(930px/20 * 4 - 10px)
+}
+#piano .teclaPreta.preta3{
+    left: calc(930px/20 * 5 - 10px)
+}
+#piano .teclaPreta.preta4{
+    left: calc(930px/20 * 5 - 10px)
+}
+#piano .teclaPreta.preta5{
+    left: calc(930px/20 * 7 - 10px)
+}
+#piano .teclaPreta.preta6{
+    left: calc(930px/20 * 9 - 10px)
+}
+#piano .teclaPreta.preta7{
+    left: calc(930px/20 * 10 - 10px)
+}
+#piano .teclaPreta.preta8{
+    left: calc(930px/20 * 11 - 10px)
+}
+#piano .teclaPreta.preta9{
+    left: calc(930px/20 * 12 - 10px)
+}
+#piano .teclaPreta.preta10{
+    left: calc(930px/20 * 14 - 10px)
+}
+#piano .teclaPreta.preta11{
+    left: calc(930px/20 * 15 - 10px)
+}
+#piano .teclaPreta.preta12{
+    left: calc(930px/20 * 16 - 10px)
+}
+#piano .teclaPreta.preta13{
+    left: calc(930px/20 * 18 - 10px)
+}
+#piano .teclaPreta.preta14{
+    left: calc(930px/20 * 19 - 10px)
+}
